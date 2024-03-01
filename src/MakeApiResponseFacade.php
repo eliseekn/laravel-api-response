@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @see \Eliseekn\LaravelApiResponse\Skeleton\SkeletonClass
  */
-class LaravelApiResponseFacade extends Facade
+class MakeApiResponseFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class LaravelApiResponseFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-api-response';
+        return 'make-api-response';
     }
 }
