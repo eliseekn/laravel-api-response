@@ -4,9 +4,6 @@ namespace Eliseekn\LaravelApiResponse;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \Eliseekn\LaravelApiResponse\Skeleton\SkeletonClass
- */
 class MakeApiResponseFacade extends Facade
 {
     /**
