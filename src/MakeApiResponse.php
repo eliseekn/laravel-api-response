@@ -14,11 +14,11 @@ trait MakeApiResponse
     public function successJsonResponse(array|string $message, int $statusCode = 200): JsonResponse
     {
         if (is_array($message)) {
-            return new JsonResponse(array_merge(['status' => 'sucess'], $message), $statusCode);
+            return new JsonResponse(array_merge(['status' => 'success'], $message), $statusCode);
         }
 
         return new JsonResponse([
-            'status' => 'sucess',
+            'status' => 'success',
             'message' => $message,
         ], $statusCode);
     }
