@@ -7,7 +7,7 @@ use Illuminate\Http\JsonResponse;
 
 trait MakeApiResponse
 {
-    public function jsonResponse(array $message, int $statusCode): JsonResponse
+    public function jsonResponse(array $message, int $statusCode = 200): JsonResponse
     {
         return new JsonResponse($message, $statusCode);
     }
