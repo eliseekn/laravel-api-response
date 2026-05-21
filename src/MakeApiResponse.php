@@ -2,7 +2,6 @@
 
 namespace Eliseekn\LaravelApiResponse;
 
-use App\Enums\HttpResponseStatus;
 use Illuminate\Http\JsonResponse;
 
 trait MakeApiResponse
@@ -15,11 +14,11 @@ trait MakeApiResponse
     public function successJsonResponse(array|string $message, int $statusCode = 200): JsonResponse
     {
         if (is_array($message)) {
-            return new JsonResponse(array_merge(['status' => HttpResponseStatus::SUCCESS], $message), $statusCode);
+            return new JsonResponse(array_merge(['status' => 'sucess'], $message), $statusCode);
         }
 
         return new JsonResponse([
-            'status' => HttpResponseStatus::SUCCESS,
+            'status' => 'sucess',
             'message' => $message,
         ], $statusCode);
     }
@@ -27,11 +26,11 @@ trait MakeApiResponse
     public function errorJsonResponse(array|string $message, int $statusCode = 500): JsonResponse
     {
         if (is_array($message)) {
-            return new JsonResponse(array_merge(['status' => HttpResponseStatus::ERROR], $message), $statusCode);
+            return new JsonResponse(array_merge(['status' => 'error'], $message), $statusCode);
         }
 
         return new JsonResponse([
-            'status' => HttpResponseStatus::ERROR,
+            'status' => 'error',
             'message' => $message,
         ], $statusCode);
     }
